@@ -2,8 +2,8 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 :root{
-    --primary-color: #026467;
-    --secondary-color: #D8FFE2;
+    --primary-color: #800059;
+    --secondary-color: #FFC3FF;
     --body-text-color: #596392;
     --navbar-footer-color: #F9F9F9;
 }
@@ -18,7 +18,6 @@ body{
     border-radius: 20px;
     background-color: var(--secondary-color);
     color: var(--primary-color);
-
 
 }
 .nav-link{

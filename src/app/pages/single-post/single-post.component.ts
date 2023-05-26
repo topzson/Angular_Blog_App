@@ -8,8 +8,8 @@ import { PostsService } from 'src/app/services/posts.service';
   styleUrls: ['./single-post.component.css']
 })
 export class SinglePostComponent implements OnInit{
-postData:any;
-similarPostArray:any;
+postData:any= [];
+similarPostArray:any = [];
   constructor(private route:ActivatedRoute, private postService: PostsService){}
 
   ngOnInit(): void {

@@ -21,6 +21,8 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { ToastrModule } from 'ngx-toastr';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -47,6 +49,7 @@ import { ToastrModule } from 'ngx-toastr';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
     ToastrModule.forRoot(),
+    FormsModule,
 
   ],
   providers: [{ provide: FIREBASE_OPTIONS, useValue: environment.firebase }],

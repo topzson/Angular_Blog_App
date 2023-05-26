@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PostCardComponent implements OnInit{
   constructor(){}
 
-  @Input() postData: any | undefined;
+  @Input() postData: any ;
 
   ngOnInit(): void {
       console.log(this.postData);

@@ -1,1 +1,10 @@
-{}
+{
+  "hosting": {
+    "public": "Angular_Blog_App",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

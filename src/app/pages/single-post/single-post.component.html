@@ -2,17 +2,17 @@
     <div class="row">
         <div class="col-md-9">
             <div class="card">
-                <img src="https://images.pexels.com/photos/4218883/pexels-photo-4218883.jpeg" alt="">
+                <img src="{{postData.postImgPath}}" alt="">
                 <div class="card-body">
-                    <small class="bg-light text-danger text-center"> Design </small>
-                    <small class="bg-light text-success text-center ml-2"> Featured </small>
-                    <small class="bg-light text-info text-center ml-2"> View - 100,256 </small>
-                    <small class="bg-light text-warning text-center ml-2"> LAST UPDATED - MAY 22, 2023 </small>
+                    <small class="bg-light text-danger text-center"> {{postData.category.category}} </small>
+                    <small class="bg-light text-success text-center ml-2" *ngIf="postData.isFeatured"> Featured </small>
+                    <small class="bg-light text-info text-center ml-2"> View - {{postData.views}} </small>
+                    <small class="bg-light text-warning text-center ml-2"> LAST UPDATED - {{postData.createdAt.toMillis() | date}}</small>
 
                     <h1 class="mt-3 mb">
-                        HOW TO START A BLOG IN 2023 EDITED NEW CATEGORY
+                        {{postData.title}}
                     </h1>
-                    <p>A blog (a truncation of "weblog")[1] is an informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries (posts). Posts are typically displayed in reverse chronological order so that the most recent post appears first, at the top of the web page. Until 2009, blogs were usually the work of a single individual,[citation needed] occasionally of a small group, and often covered a single subject or topic. In the 2010s, "multi-author blogs" (MABs) emerged, featuring the writing of multiple authors and sometimes professionally edited. MABs from newspapers, other media outlets, universities, think tanks, advocacy groups, and similar institutions account for an increasing quantity of blog traffic. The rise of Twitter and other "microblogging" systems helps integrate MABs and single-author blogs into the news media. Blog can also be used as a verb, meaning to maintain or add content to a blog.</p>
+                    <p [innerHtml]="postData.content"></p>
                 </div>
             </div>
             <app-comment-form></app-comment-form>
@@ -20,9 +20,10 @@
             
         </div>  
         <div class="col-md-3">
-            <app-post-card></app-post-card>
-            <app-post-card></app-post-card>
-            <app-post-card></app-post-card>
+            <div *ngFor="let similarPost of similarPostArray">
+                <app-post-card [postData]="similarPost"></app-post-card>
+            </div>
+        
 
         </div>
     </div>

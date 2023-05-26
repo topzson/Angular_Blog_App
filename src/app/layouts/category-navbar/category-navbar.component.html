@@ -2,12 +2,10 @@
 
     <div class="container">
         <div class="collapse navbar-collapse justify-content-center" >
-            <ul class="navbar-nav">
+            <ul class="navbar-nav" *ngFor="let category of categoryArray">
 
-                <li class="nav-item ml-3"><a href="#" class="nav-link">Design</a></li>
-                <li class="nav-item ml-3"><a href="#" class="nav-link">Inspiration</a></li>
-                <li class="nav-item ml-3"><a href="#" class="nav-link">Sport</a></li>
-                <li class="nav-item ml-3"><a href="#" class="nav-link">Politics</a></li>
+                <li class="nav-item ml-3"><a href="#" class="nav-link" [routerLink]="['/category',category.data.category,category.id]">{{category.data.category}}</a></li>
+            
 
             </ul>
         </div>

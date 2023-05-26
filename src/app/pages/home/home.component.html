@@ -9,18 +9,10 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-3">
-                <app-post-card></app-post-card>
+            <div class="col-lg-3 mb-2" *ngFor="let featuredPost of featuredPostsArray">
+                <app-post-card [postData]="featuredPost"></app-post-card>
             </div>
-            <div class="col-lg-3">
-                <app-post-card></app-post-card>
-            </div>
-            <div class="col-lg-3">
-                <app-post-card></app-post-card>
-            </div>
-            <div class="col-lg-3">
-                <app-post-card></app-post-card>
-            </div>
+
         </div>
 
 
@@ -35,24 +27,10 @@
     </div>
 
     <div class="row">
-        <div class="col-md-4 mt-3">
-            <app-post-card></app-post-card>
+        <div class="col-md-4 mt-3" *ngFor="let latestPost of latestPostArray">
+            <app-post-card [postData]="latestPost"></app-post-card>
         </div>
-        <div class="col-md-4 mt-3">
-            <app-post-card></app-post-card>
-        </div>
-        <div class="col-md-4 mt-3">
-            <app-post-card></app-post-card>
-        </div>
-        <div class="col-md-4 mt-3">
-            <app-post-card></app-post-card>
-        </div>
-        <div class="col-md-4 mt-3">
-            <app-post-card></app-post-card>
-        </div>
-        <div class="col-md-4 mt-3">
-            <app-post-card></app-post-card>
-        </div>
+       
     </div>
 
 </section>

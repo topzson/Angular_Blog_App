@@ -1,0 +1,20 @@
+<div class="bg-theme p-5">
+    <div class="container">
+        <h1 class="text-white">
+            {{categoryObj.category}}
+        </h1>
+        <p class="text-white">aosdlskd asdkaj asdlasjd alsjda lsdjasd asdjasldjl
+            alsjdl.</p>
+
+    </div>
+
+</div>
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-4 mb-3" *ngFor="let post of postArray">
+            <app-post-card [postData]="post"></app-post-card>
+        </div>
+   
+   
+    </div>
+</div>

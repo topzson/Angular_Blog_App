@@ -1,0 +1,36 @@
+<section class="featured-section">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center mt-5">
+                <h2 class="text-white"> Featured Posts  </h2>
+                <p class="text-white"> Lorem ipsum dolor sot amet asdjjhaks asdjh asd.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 mb-2" *ngFor="let featuredPost of featuredPostsArray">
+                <app-post-card [postData]="featuredPost"></app-post-card>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+
+<section class="container mt-5">
+    
+    <div class="col-md-12 text-center">
+        <h2> Latest Posts </h2>
+        <p> asda aksdjlka alsdajhda sdad asdlajlj asdla ldaksdjaksd lkja sd.</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 mt-3" *ngFor="let latestPost of latestPostArray">
+            <app-post-card [postData]="latestPost"></app-post-card>
+        </div>
+       
+    </div>
+
+</section>

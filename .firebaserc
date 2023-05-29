@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "ang-blog-9ab69"
+  },
+  "targets": {
+    "ang-blog-9ab69": {
+      "hosting": {
+        "ang-blog-app": [
+          "ang-blog-9ab69"
+        ]
+      }
+    }
   }
 }

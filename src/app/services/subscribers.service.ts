@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Injectable({
@@ -11,7 +10,7 @@ export class SubscribersService {
 
   addSubs(subData:any){
     this.afs.collection('subscribers').add(subData).then(()=>{
-      console.log('Subscriber Saved Sucessfully');
+      console.log('Subscriber Saved Successfully');
     })
 
 

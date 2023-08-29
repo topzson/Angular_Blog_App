@@ -18,13 +18,12 @@
             <app-comment-form></app-comment-form>
             <app-comment-list></app-comment-list>
             
-        </div>  
+        </div>
         <div class="col-md-3">
             <div *ngFor="let similarPost of similarPostArray">
                 <app-post-card [postData]="similarPost"></app-post-card>
             </div>
         
-
         </div>
     </div>
 </div>

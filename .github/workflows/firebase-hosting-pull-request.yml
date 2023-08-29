@@ -14,6 +14,6 @@ jobs:
         uses: FirebaseExtended/action-hosting-deploy@v0
 
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ANG_BLOG_9AB69 }}'
+          repoToken: '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'
+          firebaseServiceAccount: 'firebase-adminsdk-ih7c2@ang-blog-9ab69.iam.gserviceaccount.com'
           projectId: ang-blog-9ab69
